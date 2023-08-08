@@ -7,12 +7,12 @@ body {
 
   @font-face {
     font-family: "Righteous";
-    src: url(/Righteous-Regular.ttf);
+    src: url(./Righteous-Regular.ttf);
   }
 
   @font-face {
     font-family: "Barlow";
-    src: url(/Barlow-Black.ttf);
+    src: url(./Barlow-Black.ttf);
   }
 
 
