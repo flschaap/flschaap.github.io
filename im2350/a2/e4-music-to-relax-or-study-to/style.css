@@ -1,0 +1,154 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  --col-01:#222323;
+  --col-02:#f0f6f0;
+  --col-03:#41283e;
+  --col-04:#d8eef9;;
+  --col-05:#bcbdbc;
+  --col-06:#6f6f6f;
+  --col-07:#b19b95; 
+}
+
+body {
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+}
+
+.audio-player-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* becuase I want to overlay the play icon on the audio they need to be in their own wrapper */
+.audio-element-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#audioElement{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#heroImage{
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#audioPlayOverlay{
+  width: 8rem;
+  height: 8rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* The control bar is separated into different buttons to make it clear that there are three places for the user to control the media player */
+.audio-controls-wrapper{
+  display: flex;
+  justify-content: center;
+}
+#controlsWrapper{
+  display: none;
+}
+
+.audio-control-button{
+  width: 2rem;
+  height: 2rem;
+  padding: .1rem;
+  margin-top: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+  background-color: var(--col-05);
+}
+.audio-control-button:hover{
+  background-color: var(--col-06);
+}
+.audio-control-button:active{
+  background-color: var(--col-06);
+}
+.button-icon{
+  pointer-events: none;
+}
+
+#playButton{
+  background-image: url('./icons/play.svg');
+  border: none;
+}
+
+/* The progress bar has a gradient to indicate more positivity towards the end of the audio as the user has been studying/relaxing for a long time */ 
+.audio-progress-bar{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 1rem;
+  margin-left: .3rem;
+  border-radius: 25px;
+  height: 2rem;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--col-01);
+  box-shadow: 0 1px 2px var(--col-02) inset;
+}
+::-moz-progress-bar {
+  background-color: var(--col-02);
+}
+
+::-webkit-progress-bar {
+  background-color: var(--col-01);
+  border-radius: 25px;
+}
+::-webkit-progress-value {
+  background-image: linear-gradient(to right, var(--col-03), var(--col-04));
+  border-radius: 25px;
+}
+
+.timeline-loading{
+  background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
+  background-size: 200% 100%;
+  animation: loadingAnimation 4s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  100%{
+    background-position: 50% 0%;
+  }
+}
+
+#focusButton {
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-left: .3rem;
+  border-radius: 25px;
+  height: 2rem;
+  width: 2rem;
+  background-image: url('./icons/focus.svg');
+  background-color: var(--col-05);
+}
+
+#focusButton:hover {
+  background-color: var(--col-06);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+}

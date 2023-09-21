@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <title>A2 Femke Schaap</title>
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGE ME</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
+    <script src="modeSwitch.js" defer></script>
+    <!-- favicon image by Femke Schaap -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+  </head>
+
+  <body>
+    
+  
+    <div class="audio-player-wrapper">
+      
+      <div class="audio-element-wrapper">
+
+        <img id="heroImage" src="./bg-band.png" alt="">
+
+        <audio id="audioElement" controls>
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3" type="audio/mp3">
+        </audio>
+
+        <img id="audioPlayOverlay" src="./icons/play.svg">
+
+      </div>
+      <!-- this element holds all of the custom controls -->
+      <div class="audio-controls-wrapper" id="controlsWrapper">
+
+        <button class="audio-control-button" id="playButton"></button>
+
+        <progress class="audio-progress-bar" id="progressBar" value="0"></progress>
+
+        <button onclick="switchMode()" id ="focusButton"></button>
+
+      </div>
+
+      <p class="attribution">
+        "<a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia/sounds/516902">Ambient Wave 56 - (MSfxP7 - 78)</a>" by 
+        <a target="_blank" rel="noopener noreferrer" href="https://freesound.org/people/Erokia">Erokia</a> is licensed under 
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/?ref=openverse">CC BY-NC 4.0 
+          <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+          <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="height: 1em; margin-right: 0.125em; display: inline;"></img>
+        </a>. 
+      </p> 
+    </div>
+
+
+
+  </body>
+
+</html>
