@@ -1,22 +1,34 @@
+<!-- Femke Schaap, Assignment 3 - Interactive Media 2023 -->
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>femke's boilerplate</title>
-
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick your own bouquet</title>
+    <link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
 </head>
 
 <body>
+    
+    <h2>Your bouquet</h2>
+    <div class="dropArea"></div>
+    <h1>Pick your own bouquet!</h1>
+    
+    <div class="soilDropBack"></div>
+    <img src="soil.png" class="soil">
 
-	<h1>This is my boilerplate</h1>
-	
+    <div class="flowerWrapper">
+        <span class="tooltiptext">Click and drag to Your Bouquet to pick this flower</span>
+            <img src="rose.png" alt="Rose" draggable="true" id="rose">
+            <img src="lavender.png" alt="Lavender" draggable="true" id="lavender">
+            <img src="orchid.png" alt="Orchid" draggable="true" id="orchid">
+    </div> 
+  
+    <p>Welcome to the flower garden! Here you can choose which flowers you want for your bouquet by picking them and dragging them to the bouquet area. Not happy with your choice? No worrie, just replant it by dragging it back.</p>
+    <div id = "balloon"></div>
+    
 </body>
 
 </html>
