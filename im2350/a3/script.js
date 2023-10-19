@@ -20,6 +20,7 @@ function dragging(e) {
     infoDisplay.textContent = 'You have picked a ' + beingDragged.id
 }
 
+// To indicate where the user can drag the flowers to, the border of the drop area will be highlighted once the dragging starts. 
 function dragStart(e) {
     beingDragged = e.target
     dropArea.classList.add('highlight')
